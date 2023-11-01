@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<div class="login-page">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form asp-action="Login" asp-controller="Account" method="post">
+            <div class="tabcontent">
+                <label for="userType">Tipo de Usuário:</label>
+                <select id="userType" name="userType">
+                    <option value="Cliente">Cliente</option>
+                    <option value="Vendedor">Vendedor</option>
+                </select>
+            </div>
+            <div class="tabcontent">
+                <!-- Campos de login -->
+                <input type="text" name="Nome" placeholder="Nome" required>
+                <input type="password" name="Senha" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+</div>
+</html>

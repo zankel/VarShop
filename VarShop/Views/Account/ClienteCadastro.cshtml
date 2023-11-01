@@ -1,0 +1,35 @@
+﻿@model Cliente
+
+@{
+    ViewData["Title"] = "ClienteCadastro";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Substitua "styles.css" pelo caminho correto para o seu arquivo CSS, se necessário -->
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-container">
+            <h2>Cadastro</h2>
+            <form asp-action="CadastroCliente" asp-controller="Account" method="post">
+
+
+                <div id="cliente" class="tabcontent">
+                    <!-- Campos de registro para o cliente dentro do formulário -->
+                    <input type="text" asp-for="Nome" placeholder="Nome" required>
+                    <input type="number" asp-for="CPF" placeholder="CPF" required>
+                    <input type="text" asp-for="Email" placeholder="Email" required>
+                    <input type="password" asp-for="Senha" placeholder="Senha" required>
+                    <!-- Outros campos para o cliente -->
+                </div>
+                <button type="submit" class="login-button">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
